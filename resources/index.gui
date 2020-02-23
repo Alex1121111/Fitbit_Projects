@@ -1,0 +1,13 @@
+<svg class="background">
+  <text id="myHours"  fill = "#e7e91f" />
+  <text id="myMinl" fill="#4e5132"/>
+  <text id="myMinutes" fill="#edf0a4"/>
+  <text id="mym" fill="#4e5132"></text>
+  <text id="date_text" fill="#ffffff">Date</text>
+  <text id="weather_text" fill="#ffffff">Weather</text>
+  <text id="steps_text" fill="#ffffff">Steps</text>
+  <text id="date" fill="#f0ee42"></text>
+  <text id="date2" fill="#f0ee42"></text>
+  <text id="weather" fill="#f0ee42">30°C</text>
+  <text id="steps" fill="#f0ee42"></text>
+</svg>

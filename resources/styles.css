@@ -1,0 +1,79 @@
+.background {
+  viewport-fill: black;
+}
+
+#myHours {
+  font-size: 180;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%-75;
+  y: 50%+40;
+
+}
+#myMinutes {
+  font-size: 90;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%+80;
+  y: 50%+20;
+
+}
+#myMinl {
+  font-size: 90;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%+80;
+  y: 30%;
+
+}
+#mym{
+  font-size: 90;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%+80;
+  y: 80%;
+
+}
+#date_text
+{
+
+  y:90%;
+}
+#date
+{
+  y:100%;
+
+}
+#date2
+{
+  y:100%;
+  x:12%;
+}
+#weather_text
+{
+  x:28%;
+  y:90%;
+  
+}
+#weather
+{
+  x:35%;
+  y:100%;
+  
+}
+
+
+#steps_text
+{
+  x:70%;
+  y:90%;
+}
+#steps
+{
+  x:70%;
+  y:100%;
+}
