@@ -46,12 +46,14 @@
 #date
 {
   y:100%;
+  font-weight:bold;
 
 }
 #date2
 {
   y:100%;
   x:12%;
+  font-weight:bold;
 }
 #weather_text
 {
@@ -63,6 +65,7 @@
 {
   x:35%;
   y:100%;
+  font-weight:bold;
   
 }
 
@@ -76,4 +79,5 @@
 {
   x:70%;
   y:100%;
+  font-weight:bold;
 }

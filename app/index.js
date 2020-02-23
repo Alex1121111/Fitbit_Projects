@@ -5,6 +5,9 @@ import userActivity from "user-activity";
 import { today } from "user-activity";
 import * as util from "../common/utils";
 import { battery } from "power";
+import * as messaging from "messaging";
+import { units } from "user-settings";
+
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -75,7 +78,51 @@ myMinm.text=`${mins+1}`;
 
 let steps = userActivity.today.adjusted.steps || 0;
 mySteps.text=steps;
-myWeather.text=`30°C`;
+
   
 }
+// Weather module
+
+// Request weather data from the companion
+function fetchWeather() {
+  if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
+    // Send a command to the companion
+    messaging.peerSocket.send({
+      command: 'weather'
+    });
+  }
+}
+
+// Display the weather data received from the companion
+function processWeatherData(data) {
+  var intvalue = Math.round( data.temperature );
+  myWeather.text = intvalue+ "°C";
+}
+
+// Listen for the onopen event
+messaging.peerSocket.onopen = function() {
+  // Fetch weather when the connection opens
+  fetchWeather();
+}
+
+// Listen for messages from the companion
+messaging.peerSocket.onmessage = function(evt) {
+  if (evt.data) {
+    processWeatherData(evt.data);
+  }
+}
+
+// Listen for the onerror event
+messaging.peerSocket.onerror = function(err) {
+  // Handle any errors
+  console.log("Connection error: " + err.code + " - " + err.message);
+}
+
+setInterval(fetchWeather, 60 * 1000 * 60); //update weather every hour (60 minutes per hour * 1000 millisecs * 60 seconds per hour)
+
+
+
+
+
+
 
