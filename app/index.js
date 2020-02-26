@@ -65,7 +65,7 @@ else
 }
 if(mins==59)
 {
-    myMinm.text=`00`
+    myMinm.text=`00`;
 }
 else if(mins<9)
 {
